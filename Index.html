@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parthi Shopping Cart</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #007bff;
+      padding: 10px 0;
+    }
+    header .navbar-brand {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+    header .navbar-nav .nav-link {
+      color: #fff;
+      font-weight: 600;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+    }
+    header .navbar-nav .nav-link:hover {
+      color: #ffd700;
+    }
+    section {
+      padding: 60px 0;
+    }
+    #home {
+      background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1366&q=80') no-repeat center center/cover;
+      color: #fff;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+    #home::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 123, 255, 0.6);
+      z-index: 1;
+    }
+    #home .content {
+      position: relative;
+      z-index: 2;
+    }
+    #home h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+    #services .card {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    #services .card:hover {
+      transform: translateY(-10px);
+    }
+    #order-form .form-control {
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header/Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand" href="#home">Parthi Shopping Cart</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#order">Order Placing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home">
+  <div class="container content" data-aos="fade-up">
+    <h1>Welcome to Parthi Shopping Cart</h1>
+    <p>Your one-stop online shopping destination. Quality products, affordable prices, seamless experience.</p>
+    <a href="#services" class="btn btn-warning btn-lg mt-3">Explore Services</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container" data-aos="fade-right">
+  <h2 class="text-center mb-4">About Us</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img
+        src="https://images.unsplash.com/photo-1515175639099-142420454492?auto=format&fit=crop&w=600&q=70"
+        alt="About Parthi Shopping Cart"
+        class="img-fluid rounded shadow"
+      />
+    </div>
+    <div class="col-md-6">
+      <p>
+        Parthi Shopping Cart is committed to providing an exceptional online shopping experience. With diverse product categories and customer centric service, we ensure every purchase is delightful and secure. We value quality, affordability, and customer satisfaction above all.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="bg-light py-5">
+  <div class="container" data-aos="fade-left">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=70" class="card-img-top" alt="Online Shopping" />
+          <div class="card-body">
+            <h5 class="card-title">Online Shopping</h5>
+            <p class="card-text">Browse a wide variety of products across multiple categories from the comfort of your home.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=600&q=70" class="card-img-top" alt="Fast Delivery" />
+          <div class="card-body">
+            <h5 class="card-title">Fast Delivery</h5>
+            <p class="card-text">We ensure prompt shipping with trusted courier partners to deliver your orders on time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=70" class="card-img-top" alt="Customer Support" />
+          <div class="card-body">
+            <h5 class="card-title">Customer Support</h5>
+            <p class="card-text">24/7 dedicated support team to assist you with queries, returns, and order tracking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Order Placing Section -->
+<section id="order" class="container" data-aos="fade-up">
+  <h2 class="text-center mb-4">Place Your Order</h2>
+  <form id="order-form" class="mx-auto" style="max-width: 600px;">
+    <div class="mb-3">
+      <label for="orderName" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="orderName" placeholder="Enter your full name" required />
+    </div>
+    <div class="mb-3">
+      <label for="orderEmail" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="orderEmail" placeholder="name@example.com" required />
+    </div>
+    <div class="mb-3">
+      <label for="orderPhone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="orderPhone" placeholder="Enter your phone number" required />
+    </div>
+    <div class="mb-3">
+      <label for="orderProduct" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="orderProduct" placeholder="Product you want to order" required />
+    </div>
+    <div class="mb-3">
+      <label for="orderQuantity" class="form-label">Quantity</label>
+      <input type="number" class="form-control" id="orderQuantity" min="1" value="1" required />
+    </div>
+    <button type="submit" class="btn btn-primary d-block mx-auto">Submit Order</button>
+  </form>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-light py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="mx-auto" style="max-width: 600px;">
+      <input type="hidden" name="access_key" value="0784e7a7-ff2c-4a99-9ed8-6b53961bfe71" />
+      <div class="mb-3">
+        <label for="contactName" class="form-label">Name</label>
+        <input type="text" id="contactName" name="name" class="form-control" placeholder="Your full name" required />
+      </div>
+      <div class="mb-3">
+        <label for="contactEmail" class="form-label">Email</label>
+        <input type="email" id="contactEmail" name="email" class="form-control" placeholder="your.email@example.com" required />
+      </div>
+      <div class="mb-3">
+        <label for="contactPhone" class="form-label">Phone Number</label>
+        <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="Enter your phone number" required />
+      </div>
+      <div class="mb-3">
+        <label for="contactAddress" class="form-label">Address</label>
+        <input type="text" id="contactAddress" name="address" class="form-control" placeholder="Your address" required />
+      </div>
+      <div class="mb-3">
+        <label for="contactMessage" class="form-label">Message</label>
+        <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success d-block mx-auto">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>© 2025 Parthi Shopping Cart | All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap Bundle JS (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // Initialize AOS
+  AOS.init();
+
+  // Optionally handle order form submission here
+  $('#order-form').on('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for placing your order! We will contact you soon.');
+    this.reset();
+  });
+</script>
+</body>
+</html>
